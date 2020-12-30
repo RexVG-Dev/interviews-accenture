@@ -6,13 +6,20 @@ import { v4 as uuid } from 'uuid';
 
 import interviewerContext from '../../context/interviewers/interviewer-context';
 
-const ListInterviewer = () => {
+const ListInterviewer = (props) => {
+
+  const {turnAlert} = props;
 
   const interviewersContext = useContext(interviewerContext);
   const { interviewers, selectedInterviewer, getInterviewers, addInterviewer, selectInterviewer } = interviewersContext;
 
-  useEffect(() => {
-    getInterviewers();
+  // eslint-disable-next-line
+  useEffect( async () => {
+    const message = await getInterviewers();
+
+    if (message.variant === 'danger') {
+      createAlert(message);
+    }
     // eslint-disable-next-line
   }, []);
 
@@ -43,23 +50,29 @@ const ListInterviewer = () => {
     });
   }
 
-  const addId = () => {
+  const addId = async () => {
     newInterviewer.id = uuid();
-    addInterviewer(newInterviewer);
+    const message = await addInterviewer(newInterviewer);
+
+    createAlert(message);
 
     handleClose();
     setnewInterviewer(initInterviewer);
   }
 
+  const createAlert = ({variant, message}) => {
+    turnAlert(variant, message);
+  }
+
   return (
-    <div className="list-interviewrs">
+    <div className="p-3">
       <h3>Entrevistadores</h3>
       { interviewers.length > 0 ?
         (
-          <div className="cont-list">
+          <div className="d-flex flex-wrap flex-row">
             {interviewers.map(interviewer => (
               <Col
-                className = { selectedInterviewer ? selectedInterviewer.id===interviewer.id ? 'card-user border-selected': 'card-user': 'card-user'}
+                className = { selectedInterviewer ? selectedInterviewer.id===interviewer.id ? 'card-user border-solid-purple': 'card-user': 'card-user'}
                 sm="6" xs="12" md="3" lg="2"
                 key={interviewer.id}
                 onClick={() => { selectInterviewer(interviewer) }}
@@ -72,7 +85,7 @@ const ListInterviewer = () => {
                 <span>{interviewer.enterpriseid}</span>
               </Col>
             ))}
-            <Col className="buttton-to-add" sm="6" xs="12" md="3" lg="2" onClick={handleShow}>
+            <Col className="text-center cursor-pointer my-3" sm="6" xs="12" md="3" lg="2" onClick={handleShow}>
               <span><FontAwesomeIcon className="ico-user" icon="user-plus" /></span>
               <p>Haz click aquí para añadir otro entrevistador</p>
             </Col>
@@ -80,7 +93,7 @@ const ListInterviewer = () => {
         )
         :
         (
-          <div className="interviewer-empty">
+          <div className="text-center">
             <h4>No se ha registrado ningún entrevistador</h4>
             <div onClick={handleShow} className="cursor-pointer">
               <FontAwesomeIcon className="ico-user" icon="user-plus" />

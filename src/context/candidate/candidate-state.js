@@ -64,8 +64,17 @@ const CandidateState = props => {
         type: ADD_CANDIDATE,
         payload: response.data
       });
+
+      return {
+        variant: 'success',
+        message: 'Se ha agregado un candidato con éxito'
+      }
     } catch (error) {
       console.log(error);
+      return {
+        variant: 'danger',
+        message: 'Ocurrió un error durante el proceso. Intente más tarde'
+      }
     }
   }
 
@@ -78,13 +87,23 @@ const CandidateState = props => {
         type: ADD_SKILLS,
         payload: response.data
       })
+
+      return {
+        variant: 'success',
+        message: 'Skills agregados al usuario con éxito'
+      }
     } catch (error) {
       console.log(error);
       candidate.skills = [];
       dispatch({
         type: FAIL_SKILLS,
         payload: candidate
-      })
+      });
+
+      return {
+        variant: 'danger',
+        message: 'Ocurrió un error durante el proceso. Intente más tarde'
+      }
     }
   }
 
@@ -119,14 +138,13 @@ const CandidateState = props => {
   }
 
   const sendQuestions = async listQuestions => {
-    let candidateSend = state.candidate;
-
-    candidateSend.interview = listQuestions;
-    candidateSend.evaluated = true;
-
-    console.log(candidateSend);
+    
 
     try {
+      let candidateSend = state.candidate;
+
+      candidateSend.interview = listQuestions;
+      candidateSend.evaluated = true;
       const response =await clientAxios.put(`candidate/${candidateSend.id}`, candidateSend);
 
       console.log(response);
@@ -134,9 +152,26 @@ const CandidateState = props => {
         type: SEND_QUESTIONS,
         payload: response.data
       });
+
+      return {
+        variant: 'success',
+        message: 'Se finalizo la evaluación de Skills'
+      }
       
     } catch (error) {
       console.log(error);
+      let candidateSend = state.candidate;
+
+      candidateSend.interview = [];
+      candidateSend.evaluated = false;
+      dispatch({
+        type: SEND_QUESTIONS,
+        payload: state.candidate
+      });
+      return {
+        variant: 'danger',
+        message: 'Ocurrió un error al enviar la evaluación de skills. Intente más tarde'
+      }
     }
   }
 

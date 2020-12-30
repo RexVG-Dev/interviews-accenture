@@ -6,7 +6,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import candidateContext from '../../context/candidate/candidate-context';
 import interviewerContext from '../../context/interviewers/interviewer-context';
 
-const Interview = () => {
+const Interview = (props) => {
+
+  const {turnAlert} = props;
 
   const history = useHistory();
 
@@ -62,7 +64,7 @@ const Interview = () => {
 
   }
 
-  const submitInterview = () => {
+  const submitInterview = async () => {
     let checkQuestions = true;
     // eslint-disable-next-line
     listQuestions.map(question => {
@@ -71,10 +73,19 @@ const Interview = () => {
       }
     });
 
-    if (!checkQuestions) return;
+    if (!checkQuestions) {
+      const message = { variant:'danger', message: 'Faltaron preguntas por responder'}
+      createAlert(message);
+      return
+    };
 
-    sendQuestions(listQuestions);
+    const message = await sendQuestions(listQuestions);
+    createAlert(message);
 
+  }
+
+  const createAlert = ({variant, message}) => {
+    turnAlert(variant, message);
   }
 
   return (

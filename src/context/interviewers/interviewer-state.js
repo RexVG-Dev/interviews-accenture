@@ -29,9 +29,19 @@ const InterviewerState = props => {
         type: GET_INTERVIEWER,
         payload: response.data
       });
+
+      return {
+        variant: 'success',
+        message: 'Se obtuvieron los entrevistadores'
+      }
       
     } catch (error) {
       console.log(error);
+
+      return {
+        variant: 'danger',
+        message: 'Ocurrió un error al cargar a los usuarios. Intente más tarde'
+      }
     }
   }
 
@@ -44,8 +54,17 @@ const InterviewerState = props => {
         type: ADD_INTERVIEWER,
         payload: response.data
       });
+
+      return {
+        variant: 'success',
+        message: 'Entrevistador dado de alta con éxito'
+      }
     } catch (error) {
       console.log(error);
+      return {
+        variant: 'danger',
+        message: 'Ocurrió un error durante el proceso. Intente más tarde'
+      }
     }
   }
 

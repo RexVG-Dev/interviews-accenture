@@ -8,7 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import candidateContext from '../../context/candidate/candidate-context';
 import interviewerContext from '../../context/interviewers/interviewer-context';
 
-const Candidate = () => {
+const Candidate = (props) => {
+
+  const {turnAlert} = props;
 
   const history = useHistory();
 
@@ -59,16 +61,18 @@ const Candidate = () => {
     });
   }
 
-  const addId = () => {
+  const addId = async () => {
     newCandidate.id = uuid();
-    addCandidate(newCandidate);
+    const message = await addCandidate(newCandidate);
     handleClose();
-    // console.log(newCandidate);
+    createAlert(message);
   }
 
   const updateSkills = async () => {
-    candidate.skills = await skills.filter(skill => skill.isChecked === true);
-    updateCandidate(candidate);
+    let tempCandidate = candidate;
+    tempCandidate.skills = await skills.filter(skill => skill.isChecked === true);
+    const message = await updateCandidate(tempCandidate);
+    createAlert(message);
     handleCloseSkills();
   }
 
@@ -93,6 +97,10 @@ const Candidate = () => {
       default:
         return;
     }
+  }
+
+  const createAlert = ({variant, message}) => {
+    turnAlert(variant, message);
   }
 
   return (
@@ -127,7 +135,7 @@ const Candidate = () => {
               xs="12" md="6"
               className="mt-3"
             >
-              <div className="p-1 main-cont-skills">
+              <div className="p-1 main-cont-skills border-solid-purple">
                 <h3>Skills a evaluar:</h3>
                 {candidate.skills.length > 0 ?
                   <div>

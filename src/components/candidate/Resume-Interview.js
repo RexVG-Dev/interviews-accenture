@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import candidateContext from '../../context/candidate/candidate-context';
 
-const ResumeInterview = () => {
+const ResumeInterview = (props) => {
+
+  const {turnAlert} = props;
 
   const history = useHistory();
 
@@ -28,12 +30,23 @@ const ResumeInterview = () => {
     setComment(e.target.value);
   }
 
-  const endInterview = () => {
+  const endInterview = async () => {
     let newValCandidate = candidate;
     newValCandidate.comments = comment;
-    updateCandidate(newValCandidate);
+    let message = await updateCandidate(newValCandidate);
 
-    history.push('/');
+    message.message = message.variant === 'danger' ? 'Ocurrió un error al finalizar la entrevista' : 'Se ha finalizado la entrevista';
+    
+    createAlert(message);
+
+    if (message.variant === 'success') {
+      history.push('/');
+    }
+    
+  }
+
+  const createAlert = ({variant, message}) => {
+    turnAlert(variant, message);
   }
 
   return (
