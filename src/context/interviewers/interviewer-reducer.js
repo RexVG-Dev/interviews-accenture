@@ -17,7 +17,8 @@ export default (state, action ) => {
       return {
         ...state,
         interviewers: [
-          action.payload, ...state.interviewers
+          ...state.interviewers,
+          action.payload
         ],
         selectedInterviewer: null
       }
