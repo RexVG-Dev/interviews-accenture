@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First Step
+You should to install json-server, open a terminal and run the script:
+
+### `npm install -g json-server`
+
+Then you can find de db.json file in this project to use de API.
+
+run de script:
+### `json-server --watch db.json --port 4000`
+
+You can change the port, but remember change it in the axios configuration.
+
+See the oficial site [json-server](https://www.npmjs.com/package/json-server) for more information
+
 ## Available Scripts
 
 In the project directory, you can run:
