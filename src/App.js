@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './components/FontAwesomeIcons';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import ListInterviewer from './components/interviewer/ListInterviewer';
+import Candidate from './components/candidate/Candidate';
+import Interview from './components/interview/Interview';
+import ResumeInterview from './components/candidate/Resume-Interview';
+
+import InterviewerState from './context/interviewers/interviewer-state';
+import CandidateState from './context/candidate/candidate-state';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InterviewerState>
+      <div className="cont-main">
+        <Router>
+          <Header />
+          <div className="cont-switch">
+            <Switch>
+              <Route exact path="/" component={ListInterviewer} />
+              <CandidateState>
+                <Route exact path="/candidato" component={Candidate} />
+                <Route exact path="/entrevista" component={Interview}/>
+                <Route exact path="/resumen" component={ResumeInterview}/>
+              </CandidateState>
+            </Switch>
+          </div>
+
+          <Footer />
+        </Router>
+      </div>
+    </InterviewerState>
+
   );
 }
 

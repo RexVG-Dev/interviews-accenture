@@ -11,3 +11,290 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cont-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cont-header {
+  width: 100%;
+  height: 10vh;
+  background: #a000ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.cont-footer {
+  width: 100%;
+  height: 5vh;
+  background: #5f009a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.cont-switch {
+  height: 85vh;
+  overflow: auto;
+}
+
+.box {
+  width: 100%;
+  height: 35vh;
+  background: #a000ff;
+  margin: 10px 0;
+}
+
+.list-interviewrs {
+  padding: 15px;
+}
+
+.interviewer-empty {
+  text-align: center;
+}
+
+.ico-user {
+  font-size: 30px;
+}
+
+.ico-no-skills {
+  font-size: 60px;
+  color: #a000ff;
+  margin: 0 auto;
+}
+
+.cont-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.buttton-to-add {
+  text-align: center;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.card-user {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 5px;
+  min-width: 140px;
+  flex-wrap: wrap;
+  word-break: break-word;
+  border-radius: 10px;
+}
+
+.border-selected {
+  border: #a000ff 1px solid;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-user:active {
+  background: rgba(160, 0, 255, 0.4);
+}
+
+.add-candidate {
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.btn-add-candidate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.icon-btn-add {
+  margin: 0 auto;
+}
+
+.candidate-info {
+  width: auto;
+  border-top: #a000ff 1px solid;
+  border-bottom: #5f009a 1px solid;
+  padding: 10px 0;
+}
+
+.row-cont-info-candidate {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-cont-info-candidate {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-info-candidate {
+  font-size: 16px;
+  font-weight: 800;
+  color: #979797;
+}
+
+.span-info-candidate {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+
+}
+
+.main-cont-skills {
+  min-height: 231px;
+  border: solid 1px #a000ff;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-black{
+  background: #000;
+}
+
+.bg-yellow {
+  background: #ec0;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.min-height-70 {
+  min-height: 70vh;
+}
+.bg-orange {
+  background: #ff7f50;
+}
+
+.Carousel {
+  min-height: 80%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Carousel-Item {
+  position: initial !important;
+  min-height: 60vh;
+  height: auto;
+  /* background: cornflowerblue; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: #000 !important;
+  border-radius: 50%;
+  width: 70px !important;
+  height: 70px !important;
+  background-color: #a000ff !important;
+}
+
+.Carousel-Caption {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.Form-Question {
+  min-height: 70vh;
+  color: #000;
+  font-size: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.title-question {
+  font-weight: bold;
+  color: #979797;
+  font-size: 20px;
+}
+
+.descp-question {
+  font-weight: 500;
+}
+
+.footer-slide {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+.current-slide {
+  color: #5f009a;
+}
+
+.total-slide {
+  color: #000;
+}
+
+.title-table-resume {
+  color: #979797;
+}
+
+.see-questions {
+  color:#0069d9;
+}
+
+.see-questions:hover {
+  text-decoration: underline;
+}
+
+.row-header-results {
+  align-items: center;
+}
+
+.color-purple-1 {
+  color: #a000ff;
+}
+
+.header-modal-resume {
+  background: #5f009a;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  align-items: center;
+}
+
+.boder-solid-black {
+  border: 1px solid #000;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .row-header-results{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+@media only screen and (max-width: 512px) {
+  .Carousel-Item {
+    min-height: 85vh;
+  }
+  .Carousel-Caption {
+    min-height: 90%;
+    height: auto;
+  }
+}

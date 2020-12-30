@@ -1,0 +1,612 @@
+{
+  "interviewer": [
+    {
+      "id": "fb1f9a3f-623f-4ccb-a813-8bd420c05e04",
+      "name": "Franco Javier López Escamilla",
+      "idEmployee": "18432398",
+      "enterpriseid": "franco.escamilla"
+    },
+    {
+      "id": "4ee37ac0-6cc2-428d-82b4-7043f9c7c48b",
+      "name": "Sofía Niño de Rivera",
+      "idEmployee": "574983",
+      "enterpriseid": "sofia.nino.rivera"
+    },
+    {
+      "id": "f13a08f6-a77b-4b4c-9414-9f04a0491a7c",
+      "name": "Ricardo O’Farril",
+      "idEmployee": "784925",
+      "enterpriseid": "ritchie.ofarril"
+    },
+    {
+      "id": "ceaa0f33-63a8-4aaf-b6fb-9c2456392cd2",
+      "name": "David Khari Webber",
+      "idEmployee": "103532",
+      "enterpriseid": "dave.chappelle"
+    }
+  ],
+  "candidate": [
+    {
+      "idInterviewer": "f13a08f6-a77b-4b4c-9414-9f04a0491a7c",
+      "name": "Peter Parker",
+      "email": "pparker@correo.com",
+      "type": "Interno",
+      "skills": [],
+      "evaluated": false,
+      "interview": [],
+      "comments": "",
+      "id": "8148710d-f028-44c8-b12a-9b5cb5453efa"
+    },
+    {
+      "idInterviewer": "4ee37ac0-6cc2-428d-82b4-7043f9c7c48b",
+      "name": "Miles Morales",
+      "email": "mmorales@correo.com",
+      "type": "Externo",
+      "skills": [
+        {
+          "id": "skill1",
+          "name": "Javascript",
+          "isChecked": true
+        }
+      ],
+      "evaluated": true,
+      "interview": [
+        {
+          "id": "jvques1",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Qué diferencia existe entre let, var y const?",
+          "comments": "Entiende la referencia",
+          "response": true
+        },
+        {
+          "id": "jvques2",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferenica entre === y ==?",
+          "comments": "Le falto definir ",
+          "response": false
+        },
+        {
+          "id": "jvques3",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferencia entre push y sprit?",
+          "comments": "",
+          "response": true
+        }
+      ],
+      "comments": "Se desarrollo bien",
+      "id": "f90ace0a-541a-4a78-9e47-6a4468312682"
+    },
+    {
+      "idInterviewer": "ceaa0f33-63a8-4aaf-b6fb-9c2456392cd2",
+      "name": "Bruce Banner",
+      "email": "bbanner@correo.com",
+      "type": "Interno",
+      "skills": [
+        {
+          "id": "skill1",
+          "name": "Javascript",
+          "isChecked": true
+        },
+        {
+          "id": "skill2",
+          "name": "Angular",
+          "isChecked": true
+        },
+        {
+          "id": "skill3",
+          "name": "ReactJs",
+          "isChecked": true
+        },
+        {
+          "id": "skill4",
+          "name": "HTML",
+          "isChecked": true
+        },
+        {
+          "id": "skill5",
+          "name": "CSS",
+          "isChecked": true
+        },
+        {
+          "id": "skill6",
+          "name": "TypeScript",
+          "isChecked": true
+        },
+        {
+          "id": "skill7",
+          "name": "Git",
+          "isChecked": true
+        },
+        {
+          "id": "skill8",
+          "name": "NodeJs",
+          "isChecked": true
+        }
+      ],
+      "evaluated": true,
+      "interview": [
+        {
+          "id": "HTMLques1",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Qué son las etiquetas?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "HTMLques2",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Cómo se inserta un símbolo de copyright en una página del navegador?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "HTMLques3",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Un hipervínculo se aplica sólo al texto?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "cssques1",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": "¿Cómo puedes aplicar estilos CSS a una página web?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "cssques2",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": "¿Qué son las pseudo clases?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "cssques3",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": " ¿Qué son los pseudo elementos?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "tsques1",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿Qué son las interfaces en TypeScript?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "tsques2",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿TypeScript admite tipos literales numéricos?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "tsques3",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿Cuál son los beneficios ?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "gitques1",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Qué es un repositorio en Git?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "gitques2",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Cuál es el commando para escribir un mensaje commit?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "gitques3",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Qué realiza el commando git push?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "nodeques1",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Cuáles son las ventajas de usar NodeJs?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "nodeques2",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Puedes acceder al DOM desde NodeJs?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "nodeques3",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Qué es un event loop en NodeJs?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "angques1",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Qué son los pipes?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "angques2",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Sabes cuáles son los Lifecycle hooks de Angular?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "angques3",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Cuál es la compilación AOT?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "jvques1",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Qué diferencia existe entre let, var y const?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "jvques2",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferenica entre === y ==?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "jvques3",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferencia entre push y sprit?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "reactques1",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Para qué se utiliza setState?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "reactques2",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Qué son los props?",
+          "comments": "",
+          "response": true
+        },
+        {
+          "id": "reactques3",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Qué es React Redux?",
+          "comments": "",
+          "response": true
+        }
+      ],
+      "comments": "Todas fueron correctas",
+      "id": "f6155817-c999-4690-abc7-64f2864c57ac"
+    }
+  ],
+  "summarySkills": [
+    {
+      "id": "skill1",
+      "name": "Javascript",
+      "isChecked": false
+    },
+    {
+      "id": "skill2",
+      "name": "Angular",
+      "isChecked": false
+    },
+    {
+      "id": "skill3",
+      "name": "ReactJs",
+      "isChecked": false
+    },
+    {
+      "id": "skill4",
+      "name": "HTML",
+      "isChecked": false
+    },
+    {
+      "id": "skill5",
+      "name": "CSS",
+      "isChecked": false
+    },
+    {
+      "id": "skill6",
+      "name": "TypeScript",
+      "isChecked": false
+    },
+    {
+      "id": "skill7",
+      "name": "Git",
+      "isChecked": false
+    },
+    {
+      "id": "skill8",
+      "name": "NodeJs",
+      "isChecked": false
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill1",
+      "name": "Javascript",
+      "questions": [
+        {
+          "id": "jvques1",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Qué diferencia existe entre let, var y const?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "jvques2",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferenica entre === y ==?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "jvques3",
+          "idSkill": "skill1",
+          "nameSkill": "Javascript",
+          "question": "¿Cuál es la diferencia entre push y sprit?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill2",
+      "name": "Angular",
+      "questions": [
+        {
+          "id": "angques1",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Qué son los pipes?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "angques2",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Sabes cuáles son los Lifecycle hooks de Angular?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "angques3",
+          "idSkill": "skill2",
+          "nameSkill": "Angular",
+          "question": "¿Cuál es la compilación AOT?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill3",
+      "name": "ReactJs",
+      "questions": [
+        {
+          "id": "reactques1",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Para qué se utiliza setState?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "reactques2",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Qué son los props?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "reactques3",
+          "idSkill": "skill3",
+          "nameSkill": "ReactJs",
+          "question": "¿Qué es React Redux?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill4",
+      "name": "HTML",
+      "questions": [
+        {
+          "id": "HTMLques1",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Qué son las etiquetas?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "HTMLques2",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Cómo se inserta un símbolo de copyright en una página del navegador?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "HTMLques3",
+          "idSkill": "skill4",
+          "nameSkill": "HTML",
+          "question": "¿Un hipervínculo se aplica sólo al texto?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill5",
+      "name": "CSS",
+      "questions": [
+        {
+          "id": "cssques1",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": "¿Cómo puedes aplicar estilos CSS a una página web?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "cssques2",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": "¿Qué son las pseudo clases?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "cssques3",
+          "idSkill": "skill5",
+          "nameSkill": "CSS",
+          "question": " ¿Qué son los pseudo elementos?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill6",
+      "name": "TypeScript",
+      "questions": [
+        {
+          "id": "tsques1",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿Qué son las interfaces en TypeScript?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "tsques2",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿TypeScript admite tipos literales numéricos?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "tsques3",
+          "idSkill": "skill6",
+          "nameSkill": "TypeScript",
+          "question": "¿Cuál son los beneficios ?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill7",
+      "name": "Git",
+      "questions": [
+        {
+          "id": "gitques1",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Qué es un repositorio en Git?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "gitques2",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Cuál es el commando para escribir un mensaje commit?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "gitques3",
+          "idSkill": "skill7",
+          "nameSkill": "Git",
+          "question": "¿Qué realiza el commando git push?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "id": "skill8",
+      "name": "NodeJs",
+      "questions": [
+        {
+          "id": "nodeques1",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Cuáles son las ventajas de usar NodeJs?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "nodeques2",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Puedes acceder al DOM desde NodeJs?",
+          "comments": "",
+          "response": ""
+        },
+        {
+          "id": "nodeques3",
+          "idSkill": "skill8",
+          "nameSkill": "NodeJs",
+          "question": "¿Qué es un event loop en NodeJs?",
+          "comments": "",
+          "response": ""
+        }
+      ]
+    }
+  ]
+}
